@@ -3,12 +3,12 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-const TOKEN = process.env.MAILTRAP_TOKEN;
 export const mailtrapClient = new MailtrapClient({
-  token: TOKEN,
+	endpoint: process.env.MAILTRAP_ENDPOINT,
+	token: process.env.MAILTRAP_TOKEN,
 });
 
 export const sender = {
-  email: "hello@demomailtrap.com", // TODO: Replace with production email or domain email
+  email: "mailtrap@demomailtrap.com", // TODO: Replace with production email or domain email
   name: "Cristian Cabrera",
 };
